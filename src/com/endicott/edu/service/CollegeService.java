@@ -87,7 +87,6 @@ public class CollegeService {
     @Produces(MediaType.APPLICATION_JSON)
     public CollegeModel updateCollege(@PathParam("runId") String runId, @PathParam("command") String command,@PathParam("arguments") String args) {
         System.out.println("College command: " + command);
-        // new thing
 
         if (command.equalsIgnoreCase("tuition")) { //this changes the tuition of the college.
             return CollegeManager.updateCollegeTuition(runId,Integer.valueOf(args)) ;
